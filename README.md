@@ -16,7 +16,7 @@ $ . env/bin/activate
 
 Run the script with `--help` to see possible options and positional arguments: 
 ```console
->>> python translate.py --help
+$ python translate.py --help
 usage: translate.py [-h] [--source-lang SOURCE_LANG] [--target-lang TARGET_LANG]
                     input output
 
@@ -32,7 +32,7 @@ options:
   --target-lang TARGET_LANG, -tg TARGET_LANG
 ```
 
-Real life example: translate [`keywords_zh`](assets/keywords_zh.csv) from Chinese to English
+Real life example: translate [`keywords_zh`](assets/keywords_zh.csv) from Chinese (`-src=zh-cn`) to English (`-tg=en`), save results into [`keywords_zh_en.csv`](assets/keywords_zh_en.csv)
 ```
-python translate.py assets/keywords_zh.csv assets/keywords_zh_en.csv -src=zh-cn -tg=en
+$ python translate.py assets/keywords_zh.csv assets/keywords_zh_en.csv -src=zh-cn -tg=en
 ```
