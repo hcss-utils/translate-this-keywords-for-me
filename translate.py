@@ -1,14 +1,11 @@
 """This script translates citespace's exports into dest lang."""
 import argparse
-from pathlib import Path
 
 import pandas as pd
 from googletrans import Translator
 
-ASSETS = Path(__file__).resolve().parent / "assets"
 
-
-def read_data(filename: Path) -> pd.DataFrame:
+def read_data(filename: str) -> pd.DataFrame:
     """Reads from citespace's database export, no columns by default."""
     return pd.read_csv(filename, names=["id", "keyword"])
 
